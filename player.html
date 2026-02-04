@@ -1,3 +1,4 @@
+@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +45,7 @@
     var iframe = document.getElementById("playerIframe");
     iframe.src =
       "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(videoId) +
-@@ -62,12 +66,10 @@
+@@ -62,16 +66,14 @@
           var nowT = Math.floor(player.getCurrentTime() || 0);
           window.location.href = 'ytplaying://' + videoId + '?t=' + nowT + '&w=' + watchedTime;
         }, 1000);
@@ -57,3 +58,7 @@
         if (watchTimerId !== null) { clearInterval(watchTimerId); watchTimerId = null; }
         window.location.href = 'ytend://' + videoId + '?t=' + videoTime + '&w=' + watchedTime;
       }
+    }
+  </script>
+</body>
+</html>
